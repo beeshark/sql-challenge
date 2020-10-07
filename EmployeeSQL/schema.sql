@@ -26,7 +26,6 @@ CREATE TABLE Titles (
     to_date date NOT NULL
 );
 
-
 CREATE TABLE Dept_Emp (
     emp_no int REFERENCES Employees(emp_no),
     dep_no varchar REFERENCES Departments(dept_no),
