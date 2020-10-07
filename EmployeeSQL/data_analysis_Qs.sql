@@ -48,6 +48,7 @@ select Employees.emp_no,
     Employees.last_name, 
     Employees.first_name, 
     Departments.dept_name
+from Employees
 join Dept_Employees on
 Employees.emp_no = Dept_Employees.emp_no
 inner join Departments on
@@ -59,6 +60,7 @@ select Employees.emp_no,
     Employees.last_name,
     Employees.first_name,
     Departments.dept_name
+from Employees
 join Dept_Employees on
 Employees.emp_no = Dept_Employees.emp_no
 inner join Departments on
