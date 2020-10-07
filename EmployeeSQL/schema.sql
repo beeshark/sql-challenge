@@ -15,27 +15,19 @@ CREATE TABLE Employees (
 CREATE TABLE Salaries (
     emp_no int REFERENCES Employees(emp_no),
     salary int NOT NULL,
-    from_date date NOT NULL,
-    to_date date NOT NULL
 );
 
 CREATE TABLE Titles (
     emp_no int REFERENCES Employees(emp_no),
     title varchar NOT NULL,
-    from_date date NOT NULL,
-    to_date date NOT NULL
 );
 
 CREATE TABLE Dept_Emp (
     emp_no int REFERENCES Employees(emp_no),
     dep_no varchar REFERENCES Departments(dept_no),
-    from_date date NOT NULL,
-    to_date date NOT NULL
 );
 
 CREATE TABLE Dept_Manager (
     emp_no int REFERENCES Employees(emp_no),
     dept_no varchar REFERENCES Departments(dept_no),
-    from_date date NOT NULL,
-    to_date date NOT NULL
 );

@@ -11,7 +11,8 @@ and hire_date < '1987-01-01'
 order by emp_no;
 
 -- #List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
-
+  
+select dept_manager.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name
 
 -- #List the department of each employee with the following information: employee number, last name, first name, and department name.
 
