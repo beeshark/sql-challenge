@@ -19,15 +19,15 @@ CREATE TABLE Salaries (
 
 CREATE TABLE Titles (
     emp_no int REFERENCES Employees(emp_no),
-    title varchar NOT NULL,
+    title varchar NOT NULL
 );
 
 CREATE TABLE Dept_Emp (
     emp_no int REFERENCES Employees(emp_no),
-    dep_no varchar REFERENCES Departments(dept_no),
+    dep_no varchar REFERENCES Departments(dept_no)
 );
 
 CREATE TABLE Dept_Manager (
     emp_no int REFERENCES Employees(emp_no),
-    dept_no varchar REFERENCES Departments(dept_no),
+    dept_no varchar REFERENCES Departments(dept_no)
 );
