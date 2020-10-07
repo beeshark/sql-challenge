@@ -35,8 +35,8 @@ CREATE TABLE Dept_Emp (
 );
 
 CREATE TABLE Dept_Manager (
-    dept_no varchar   REFERENCES Departments(dept_no),
     emp_no int  REFERENCES Employees(emp_no),
+    dept_no varchar   REFERENCES Departments(dept_no),
     from_date date   NOT NULL,
     to_date date   NOT NULL
 );
