@@ -1,5 +1,9 @@
 -- #List the following details of each employee: employee number, last name, first name, sex, and salary.
-select Employees.emp_no, Employees.last_name, Employees.first_name, Employees.gender, Salaries.salary
+select Employees.emp_no, 
+    Employees.last_name, 
+    Employees.first_name, 
+    Employees.gender, 
+    Salaries.salary
 from Employees
 inner join Salaries on
 Employees.emp_no = Salaries.emp_no;
@@ -12,7 +16,16 @@ order by emp_no;
 
 -- #List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
   
-select dept_manager.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name
+select Dept_manager.dept_no, 
+    Departments.dept_name, 
+    Dept_manager.emp_no, 
+    Employees.last_name, 
+    Employees.first_name
+from Dept_Manager
+inner join Departments on
+Dept_Manager.dept_no = Departments.dept_no
+INNER JOIN Employees ON
+Dept_Manager.dept_no = Employees.emp_no;
 
 -- #List the department of each employee with the following information: employee number, last name, first name, and department name.
 
